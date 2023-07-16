@@ -1,0 +1,87 @@
+@import "../abstracts/_variables.scss";
+
+.sidebar-container {
+  background: $primary-background-color-dark;
+  height: calc(100vh - 5rem);
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  transition: all 0.2s;
+
+  width: 17rem;
+  left: 0;
+
+  &.obscure {
+    width: 0;
+    justify-content: flex-end;
+  }
+}
+
+.boards-all {
+  padding: 1rem 0rem 2rem 1rem;
+  color: #d1d5db;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.board-btn {
+  font-family: system-ui, -apple-system;
+  padding: 1.25rem 1rem 1.2rem 1rem;
+  transition: all ease-in-out 0.3s;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  min-width: fit-content;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  color: white;
+  width: 90%;
+
+  &:hover {
+    background: white;
+    color: $button-color;
+  }
+
+  &.active {
+    background: $button-color;
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  &.create {
+    color: $button-color;
+  }
+
+  &.obscure-btn {
+    color: grey;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+
+    &:hover {
+      background: white;
+      color: $button-color;
+    }
+    &.live {
+      background: $secondary-background-color-dark;
+      width: 4rem;
+      padding-left: 1rem;
+
+      &:hover {
+        background: $button-color;
+      }
+    }
+  }
+}
+
+.top-content {
+  width: 100%;
+
+  &.obscure {
+    display: none;
+  }
+}

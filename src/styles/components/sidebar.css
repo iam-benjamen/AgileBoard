@@ -1,0 +1,85 @@
+.sidebar-container {
+  background: #2b2c37;
+  height: calc(100vh - 5rem);
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  transition: all 0.2s;
+  width: 17rem;
+  left: 0;
+}
+
+.sidebar-container.obscure {
+  width: 0;
+  justify-content: flex-end;
+}
+
+.boards-all {
+  padding: 1rem 0rem 2rem 1rem;
+  color: #d1d5db;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.board-btn {
+  font-family: system-ui, -apple-system;
+  padding: 1.25rem 1rem 1.2rem 1rem;
+  transition: all ease-in-out 0.3s;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  min-width: fit-content;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  color: white;
+  width: 90%;
+}
+
+.board-btn:hover {
+  background: white;
+  color: #635fc7;
+}
+
+.board-btn.active {
+  background: #635fc7;
+}
+
+.board-btn.active:hover {
+  background: white;
+}
+
+.board-btn.create {
+  color: #635fc7;
+}
+
+.board-btn.obscure-btn {
+  color: grey;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.board-btn.obscure-btn:hover {
+  background: white;
+  color: #635fc7;
+}
+
+.board-btn.obscure-btn.live {
+  background: #20212c;
+  width: 4rem;
+  padding-left: 1rem;
+}
+
+.board-btn.obscure-btn.live:hover {
+  background: #635fc7;
+}
+
+.top-content {
+  width: 100%;
+}
+
+.top-content.obscure {
+  display: none;
+}

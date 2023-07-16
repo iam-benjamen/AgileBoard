@@ -1,0 +1,30 @@
+@import "../abstracts/_variables.scss";
+
+.boardactions {
+  background-color: $secondary-background-color-dark;
+  padding: 1rem 3rem 1rem .7rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-radius: 3px;
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: grey;
+  font-size: .8rem;
+}
+
+.delete-btn {
+  color: rgb(220, 50, 50);
+  font-size: .8rem;
+}
