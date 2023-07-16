@@ -1,0 +1,17 @@
+@import "../abstracts/_variables.scss";
+
+.playground-container {
+  background: var(--secondary-background-color);
+  width: calc(100vw - 17rem);
+  height: calc(100vh - 6rem);    
+  float: right;
+  color: white;
+  padding-top: 1rem;
+}
+
+.playground-content {
+//   overflow: scroll;
+  width: 100%;
+  height: 100%;
+//   padding-left: 5rem;
+}

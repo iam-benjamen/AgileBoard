@@ -1,18 +1,22 @@
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { HiViewBoards } from "react-icons/hi";
 import { useState } from "react";
 import "../../styles/components/sidebar.scss";
-import { HiViewBoards } from "react-icons/hi";
-import { AiFillEyeInvisible } from "react-icons/ai";
+import useTheme from "../../hooks/useTheme";
+import ModeSwitch from "./ModeSwitch";
 
 const totalBoards = 3;
 
 const SideBar = () => {
   const [active, setActive] = useState<number>(0);
   const [hideBar, setHideBar] = useState<boolean>(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <div className={`sidebar-container ${hideBar ? "obscure" : ""}`}>
       <div className={`top-content ${hideBar ? "obscure" : ""}`}>
         <p className="boards-all">{`ALL BOARDS (${totalBoards})`}</p>
+
         <div className="boards">
           {["Platform Launch", "Marketing Plan", "Roadmap"].map(
             (item, index) => (
@@ -49,12 +53,17 @@ const SideBar = () => {
       </div>
 
       <div>
+        <ModeSwitch
+          hid={hideBar}
+          isToggled={isDarkMode}
+          onToggle={() => toggleTheme()}
+        />
         <button
           className={`board-btn obscure-btn ${hideBar ? "live" : ""}`}
           onClick={() => setHideBar(!hideBar)}
         >
           {hideBar ? (
-            <AiFillEyeInvisible style={{ color: "white", fontSize:"1.5rem" }} />
+            <AiFillEye style={{ color: "white", fontSize: "1.5rem" }} />
           ) : (
             <>
               <AiFillEyeInvisible

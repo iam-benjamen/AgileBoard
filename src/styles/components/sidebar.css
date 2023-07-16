@@ -1,11 +1,11 @@
 .sidebar-container {
-  background: #2b2c37;
+  background: var(--primary-background-color);
   height: calc(100vh - 5rem);
   justify-content: space-between;
   flex-direction: column;
+  transition: all 0.2s;
   position: absolute;
   display: flex;
-  transition: all 0.2s;
   width: 17rem;
   left: 0;
 }
@@ -17,16 +17,16 @@
 
 .boards-all {
   padding: 1rem 0rem 2rem 1rem;
-  color: #d1d5db;
+  color: var(--all-boards-text);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   width: 100%;
 }
 
 .board-btn {
   font-family: system-ui, -apple-system;
-  padding: 1.25rem 1rem 1.2rem 1rem;
-  transition: all ease-in-out 0.3s;
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  transition: all ease-in-out 0.25s;
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
   min-width: fit-content;
@@ -34,21 +34,24 @@
   font-size: 1.15rem;
   font-weight: 700;
   display: flex;
-  color: white;
+  color: var(--text-color);
   width: 90%;
+  transition: all .3s;
 }
 
 .board-btn:hover {
-  background: white;
+  background: var(--secondary-background-color);
   color: #635fc7;
 }
 
 .board-btn.active {
   background: #635fc7;
+  color: white;
 }
 
 .board-btn.active:hover {
-  background: white;
+  background: var(--secondary-background-color);
+  color: #635fc7;
 }
 
 .board-btn.create {
@@ -78,8 +81,75 @@
 
 .top-content {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .top-content.obscure {
   display: none;
+}
+
+.switch-container {
+  border-radius: 5px;
+  background: var(--secondary-background-color);
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.switch-container.obscure {
+  display: none;
+}
+
+.icon-marker {
+  padding-top: 0.3rem;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch .switch {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-switch .switch::before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: #aaa;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(25px);
+  background-color: white;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .switch {
+  background-color: #635fc7;
 }

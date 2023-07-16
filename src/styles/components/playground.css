@@ -1,0 +1,13 @@
+.playground-container {
+  background: var(--secondary-background-color);
+  width: calc(100vw - 17rem);
+  height: calc(100vh - 6rem);
+  float: right;
+  color: white;
+  padding-top: 1rem;
+}
+
+.playground-content {
+  width: 100%;
+  height: 100%;
+}

@@ -1,5 +1,5 @@
 .header-container {
-  background: #2b2c37;
+  background: var(--primary-background-color);
   justify-content: space-between;
   max-height: max-content;
   align-items: center;
@@ -15,14 +15,14 @@
 }
 
 .header-logo-text {
-  color: white;
+  color: var(--text-color);
   font-size: 1.75rem;
   font-weight: 700;
   padding-left: 0.5rem;
 }
 
 .current-board-name {
-  color: white;
+  color: var(--text-color);
   font-size: 1.35rem;
   padding-left: 5rem;
   font-weight: 700;

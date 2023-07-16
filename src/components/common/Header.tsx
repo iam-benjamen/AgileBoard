@@ -1,8 +1,8 @@
 import { IoEllipsisVerticalOutline } from "react-icons/io5";
 import { useState } from "react";
+import BoardAction from "../others/BoardActions";
 import "../../styles/components/header.scss";
 import logo from "../../assets/logo.svg";
-import BoardAction from "../others/BoardActions";
 
 const Header = () => {
   const [clicked, setClicked] = useState<boolean>(false);
