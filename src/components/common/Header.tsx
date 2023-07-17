@@ -1,11 +1,13 @@
 import { IoEllipsisVerticalOutline } from "react-icons/io5";
 import { useState } from "react";
 import BoardAction from "../others/BoardActions";
-import "../../styles/components/header.scss";
 import logo from "../../assets/logo.svg";
+import useModal from "../../hooks/useModal";
+import "../../styles/components/header.scss";
 
 const Header = () => {
   const [clicked, setClicked] = useState<boolean>(false);
+  const { Modal, openModal } = useModal();
 
   return (
     <div className="header-container">
@@ -15,7 +17,14 @@ const Header = () => {
         <p className="current-board-name">Platform Launch</p>
       </div>
       <div className="header-options">
-        <button className="add-btn">+ Add New Task</button>
+        <Modal
+          triggerElement={
+            <button className="add-btn" onClick={openModal}>
+              + Add New Task
+            </button>
+          }
+          modalContent={<div>Modal Content Goes Here</div>}
+        />
         <IoEllipsisVerticalOutline
           style={{
             color: "grey",

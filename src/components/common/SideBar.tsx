@@ -1,20 +1,24 @@
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { HiViewBoards } from "react-icons/hi";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../../styles/components/sidebar.scss";
 import useTheme from "../../hooks/useTheme";
 import ModeSwitch from "./ModeSwitch";
 
 const totalBoards = 3;
 
-const SideBar = () => {
+type SideBarProps = {
+  hideSideBar: boolean;
+  setHideBar: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const SideBar: React.FC<SideBarProps> = ({ hideSideBar, setHideBar }) => {
   const [active, setActive] = useState<number>(0);
-  const [hideBar, setHideBar] = useState<boolean>(false);
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
-    <div className={`sidebar-container ${hideBar ? "obscure" : ""}`}>
-      <div className={`top-content ${hideBar ? "obscure" : ""}`}>
+    <div className={`sidebar-container ${hideSideBar ? "obscure" : ""}`}>
+      <div className={`top-content ${hideSideBar ? "obscure" : ""}`}>
         <p className="boards-all">{`ALL BOARDS (${totalBoards})`}</p>
 
         <div className="boards">
@@ -54,15 +58,15 @@ const SideBar = () => {
 
       <div>
         <ModeSwitch
-          hid={hideBar}
+          hid={hideSideBar}
           isToggled={isDarkMode}
           onToggle={() => toggleTheme()}
         />
         <button
-          className={`board-btn obscure-btn ${hideBar ? "live" : ""}`}
-          onClick={() => setHideBar(!hideBar)}
+          className={`board-btn obscure-btn ${hideSideBar ? "live" : ""}`}
+          onClick={() => setHideBar(!hideSideBar)}
         >
-          {hideBar ? (
+          {hideSideBar ? (
             <AiFillEye style={{ color: "white", fontSize: "1.5rem" }} />
           ) : (
             <>
