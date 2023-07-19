@@ -4,6 +4,7 @@ import BoardAction from "../others/BoardActions";
 import logo from "../../assets/logo.svg";
 import useModal from "../../hooks/useModal";
 import "../../styles/components/header.scss";
+import AddNewFormModal from "../modals/AddNewModal";
 
 const Header = () => {
   const [clicked, setClicked] = useState<boolean>(false);
@@ -23,7 +24,7 @@ const Header = () => {
               + Add New Task
             </button>
           }
-          modalContent={<div>Modal Content Goes Here</div>}
+          modalContent={<AddNewFormModal />}
         />
         <IoEllipsisVerticalOutline
           style={{

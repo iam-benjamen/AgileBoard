@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
+import "../styles/components/modal.scss"
 import React from "react";
 
 interface ModalProps {
@@ -39,13 +40,10 @@ const useModal = () => {
   const Modal: React.FC<ModalProps> = ({ triggerElement, modalContent }) => {
     return (
       <>
-        {React.cloneElement(triggerElement, { onclick: openModal })}
+        {React.cloneElement(triggerElement, { onClick: openModal })}
         {isModalOpen && (
-          <div className="modal-overlay">
+          <div className={`modal-overlay ${isModalOpen ? "open" : ""}`}>
             <div ref={modalRef} className="modal">
-              <button className="modal-close" onClick={closeModal}>
-                &times;
-              </button>
               {modalContent}
             </div>
           </div>

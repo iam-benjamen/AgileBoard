@@ -3,7 +3,6 @@
   height: calc(100vh - 5rem);
   justify-content: space-between;
   flex-direction: column;
-  transition: all 0.2s;
   position: absolute;
   display: flex;
   width: 17rem;
@@ -115,6 +114,7 @@
   display: inline-block;
   width: 50px;
   height: 25px;
+  padding-bottom: 0rem;
 }
 
 .toggle-switch input[type="checkbox"] {

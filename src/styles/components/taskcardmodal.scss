@@ -1,0 +1,41 @@
+@import "../abstracts/_variables.scss";
+
+.subtasks-section {
+  margin-bottom: 2rem;
+}
+
+.subtasks-title {
+  color: #6b7280;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.subtask-div {
+  display: flex;
+  justify-content: flex-start;
+  background: var(--primary-background-color);
+  padding: 1rem 0.5em;
+  gap: 0.7rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  &:hover{
+    background: #635fc740;
+  }
+}
+
+.subtask-text {
+  font-weight: 600;
+  color: var(--text-color);
+
+  &.checked{
+    text-decoration: line-through;
+    color: #6b7280;
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: $button-color;
+  transform: scale(1.5);
+}

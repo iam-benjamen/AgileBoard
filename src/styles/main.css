@@ -4,14 +4,22 @@
   --primary-background-color: #2b2c37;
   --secondary-background-color: #20212c;
   --text-color: white;
-  --all-boards-text:#d1d5db;
+  --all-boards-text: #d1d5db;
+  --button-background: white;
+  --button-color: #635fc7;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
 }
 
 .light {
   --primary-background-color: #ffffff;
-  --secondary-background-color: #f4F7FD;
+  --secondary-background-color: #f4f7fd;
   --text-color: black;
   --all-boards-text: #4b5563;
+  --button-background: #635fc7;
+  --button-color: white;
 }
 
 body {

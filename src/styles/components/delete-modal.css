@@ -1,0 +1,45 @@
+.delete-modal {
+  padding: 1.6rem;
+  background: var(--secondary-background-color);
+  flex-direction: column;
+  border-radius: .5rem;
+  display: flex;
+  width: 22rem;
+  max-width: 90%;
+}
+
+.delete-title {
+  font-weight: 700;
+  color: #EF4444;
+  padding-bottom: 1rem;
+}
+
+.delete-warning {
+  color: #6B7280;
+  font-size: .8rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  color: white;
+  background: #EF4444;
+  width: 47%;
+  padding: .6rem 0rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.cancel-btn {
+  color: var(--button-color);
+  background: var(--button-background);
+  width: 47%;
+  padding: .6rem 0rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}

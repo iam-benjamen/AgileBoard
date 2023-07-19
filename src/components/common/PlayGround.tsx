@@ -1,12 +1,16 @@
 import "../../styles/components/playground.scss";
 import TaskCards from "../others/TaskCards";
 import { BiAddToQueue } from "react-icons/bi";
+import useModal from "../../hooks/useModal";
+import AddNewColumns from "../modals/AddNewColumns";
 
 type PlayProps = {
   hideSideBar: boolean;
 };
 
 const PlayGround: React.FC<PlayProps> = ({ hideSideBar }) => {
+  const { Modal } = useModal();
+
   return (
     <div className="playground-container">
       <div
@@ -62,11 +66,15 @@ const PlayGround: React.FC<PlayProps> = ({ hideSideBar }) => {
           </div>
         </div>
 
-        <div className="add-column">
-          <BiAddToQueue style={{ fontSize: "1.5rem" }} />
-
-          <p>New Column</p>
-        </div>
+        <Modal
+          triggerElement={
+            <div className="add-column">
+              <BiAddToQueue style={{ fontSize: "1.5rem" }} />
+              <p>New Column</p>
+            </div>
+          }
+          modalContent={<AddNewColumns />}
+        />
       </div>
     </div>
   );

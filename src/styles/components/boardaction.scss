@@ -13,6 +13,7 @@
   position: absolute;
   top: 3rem;
   right: 1rem;
+  width: max-content;
 }
 
 button {
@@ -26,7 +27,7 @@ button {
   font-size: 0.8rem;
 }
 
-.delete-btn {
+.delet-btn {
   color: rgb(220, 50, 50);
   font-size: 0.8rem;
 }

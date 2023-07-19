@@ -5,7 +5,6 @@
   height: calc(100vh - 5rem);
   justify-content: space-between;
   flex-direction: column;
-  transition: all 0.2s;
   position: absolute;
   display: flex;
   width: 17rem;
@@ -81,7 +80,6 @@
 
 .top-content {
   width: 100%;
-  // overflow-y: scroll;
   overflow-x: hidden;
 
   &.obscure {
@@ -102,7 +100,6 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  // transition: all .3s;
 
   &.obscure {
     display: none;
@@ -117,6 +114,7 @@
   display: inline-block;
   width: 50px;
   height: 25px;
+  padding-bottom: 0rem;
 }
 .toggle-switch input[type="checkbox"] {
   display: none;
