@@ -61,6 +61,7 @@ const SideBar: React.FC<SideBarProps> = ({ hideSideBar, setHideBar }) => {
             }
             modalContent={<AddNewBoardModal />}
           />
+          
         </div>
       </div>
 

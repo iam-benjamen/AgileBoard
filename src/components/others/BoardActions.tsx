@@ -2,8 +2,12 @@ import "../../styles/components/boardaction.scss";
 import useModal from "../../hooks/useModal";
 import DeleteModal from "../modals/DeleteModal";
 import AddNewColumns from "../modals/AddNewColumns";
+import React from "react";
 
-const BoardAction = () => {
+type BoardActionProps = {
+  category:string
+}
+const BoardAction:React.FC<BoardActionProps> = ({category}) => {
   const { Modal: EditModal, openModal: EditOpenModal } = useModal();
   const {
     Modal: DeleteModalElement,
@@ -16,7 +20,7 @@ const BoardAction = () => {
       <EditModal
         triggerElement={
           <button className="edit-btn" onClick={EditOpenModal}>
-            Edit Board
+            Edit {category}
           </button>
         }
         modalContent={<AddNewColumns />}
@@ -25,7 +29,7 @@ const BoardAction = () => {
       <DeleteModalElement
         triggerElement={
           <button className="delet-btn" onClick={DeleteOpenModal}>
-            Delete Board
+            Delete {category}
           </button>
         }
         modalContent={<DeleteModal action={DeleteCloseModal} />}

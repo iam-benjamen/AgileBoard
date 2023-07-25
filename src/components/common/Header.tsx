@@ -37,7 +37,7 @@ const Header = () => {
             setClicked(!clicked);
           }}
         />
-        {clicked && <BoardAction />}
+        {clicked && <BoardAction category="Board"/>}
       </div>
     </div>
   );

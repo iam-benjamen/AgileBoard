@@ -35,6 +35,7 @@ const useModal = () => {
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isModalOpen]);
 
   const Modal: React.FC<ModalProps> = ({ triggerElement, modalContent }) => {

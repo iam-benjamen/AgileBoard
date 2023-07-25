@@ -1,0 +1,61 @@
+@import "../abstracts/_variables.scss";
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;    
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    border: 1px solid $primary-background-color-dark;
+    border-radius: 8px;
+    background-color: $secondary-background-color-dark;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $primary-background-color-dark;
+      border-radius: 4px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1rem;
+      background-color: #0f2e8a;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .signin-link {
+    margin-top: 20px;
+    color: $primary-background-color-dark;
+
+    a {
+      color: #913636;
+      text-decoration: underline    ;
+    }
+  }
+}

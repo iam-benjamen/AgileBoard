@@ -32,7 +32,7 @@ const TaskCardModal = () => {
               setClicked(!clicked);
             }}
           />
-          {clicked && <BoardAction />}
+          {clicked && <BoardAction category="Task"/>}
         </div>
       </div>
 
