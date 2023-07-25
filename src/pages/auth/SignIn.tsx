@@ -1,12 +1,12 @@
 import { FormEvent, useState } from "react";
-import Spinner from "../../components/common/Spinner";
+// import Spinner from "../../components/common/Spinner";
 import "../../styles/auth/signin.scss";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState<boolean>(false);
+  // const [loading, setLoading] = useState<boolean>(false);
 
   const handleSignIn = (e: FormEvent) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const SignIn = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">{!loading ? "Sign In" : <Spinner/>}</button>
+          {/* <button type="submit">{!loading ? "Sign In" : <Spinner/>}</button> */}
         </div>
       </form>
       <div className="signup-link">
