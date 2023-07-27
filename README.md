@@ -1,9 +1,6 @@
 # AgileBoard 🚀
 
-AgileBoard is a Kanban-style project management tool designed to help teams stay organized, track tasks, and collaborate effectively. 📋✅
-
-![image](https://github.com/iam-benjamen/AgileBoard/assets/88411228/6745f2ad-1edf-4cde-979c-14f432ab78e5)
-
+AgileBoard is a Kanban-style project management tool designed to help teams stay organized & track tasks. 📋✅
 
 ## Features 🎯
 
