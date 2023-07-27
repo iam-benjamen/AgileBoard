@@ -57,9 +57,23 @@
   color: #635fc7;
 }
 
+.board-btn.logout {
+  color: #b35b5b;
+  margin-left: 1rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  background: var(--secondary-background-color);
+  padding: 1.3rem 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.board-btn.logout.obscure {
+  display: none;
+}
+
 .board-btn.obscure-btn {
   color: grey;
-  margin-bottom: 2rem;
   padding-left: 2rem;
 }
 
@@ -69,6 +83,7 @@
 }
 
 .board-btn.obscure-btn.live {
+  margin-bottom: 2rem;
   background: #635fc7;
   width: 4rem;
   padding-left: 1rem;

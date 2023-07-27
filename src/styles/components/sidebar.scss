@@ -56,17 +56,31 @@
   &.create {
     color: $button-color;
   }
+  
+  &.logout{
+    color: rgb(179, 91, 91);
+    margin-left: 1rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    background: var(--secondary-background-color);
+    padding: 1.3rem 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    &.obscure{
+      display: none;
+    }
+  }
 
   &.obscure-btn {
     color: grey;
-    margin-bottom: 2rem;
     padding-left: 2rem;
-
+    
     &:hover {
       background: white;
       color: $button-color;
     }
     &.live {
+      margin-bottom: 2rem;
       background: $button-color;
       width: 4rem;
       padding-left: 1rem;

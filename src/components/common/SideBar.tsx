@@ -6,6 +6,7 @@ import useTheme from "../../hooks/useTheme";
 import ModeSwitch from "./ModeSwitch";
 import useModal from "../../hooks/useModal";
 import AddNewBoardModal from "../modals/AddNewBoard";
+import LogoutModal from "../modals/LogoutModal";
 
 const totalBoards = 3;
 
@@ -61,7 +62,6 @@ const SideBar: React.FC<SideBarProps> = ({ hideSideBar, setHideBar }) => {
             }
             modalContent={<AddNewBoardModal />}
           />
-          
         </div>
       </div>
 
@@ -76,7 +76,7 @@ const SideBar: React.FC<SideBarProps> = ({ hideSideBar, setHideBar }) => {
           onClick={() => setHideBar(!hideSideBar)}
         >
           {hideSideBar ? (
-            <AiFillEye style={{ color: "white", fontSize: "1.5rem" }} />
+            <AiFillEye style={{ color: "white", fontSize: "1.5rem"}} />
           ) : (
             <>
               <AiFillEyeInvisible
@@ -90,6 +90,7 @@ const SideBar: React.FC<SideBarProps> = ({ hideSideBar, setHideBar }) => {
             </>
           )}
         </button>
+        <LogoutModal hideSideBar={hideSideBar}/>
       </div>
     </div>
   );

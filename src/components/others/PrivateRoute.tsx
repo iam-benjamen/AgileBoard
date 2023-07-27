@@ -7,7 +7,7 @@
 //     authenticatedPath:string
 // }
 
-// const PrivateRoute: React.FC<PrivateRouteProps> = ({, ...rest }) => {
+// const PrivateRoute: React.FC<PrivateRouteProps> = ({...rest }) => {
 //     const currentUser = firebase.auth().currentUser;
 
 //     return ( 

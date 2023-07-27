@@ -1,0 +1,27 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #2b2c37;
+}
+
+.loader-logo {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: moveAnimation 1s infinite alternate;
+  display: flex;
+  color: white;
+  gap: 1rem;
+}
+
+@keyframes moveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
